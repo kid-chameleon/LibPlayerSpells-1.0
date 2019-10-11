@@ -22,62 +22,64 @@ local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
 lib:__RegisterSpells('SHAMAN', 11320, 2, {
 	COOLDOWN = {
-		   8143, -- Tremor Totem
-		   3599,
-		   6363,
 		  17364, -- Stormstrike (Enhancement)
 		  51505, -- Lava Burst (Elemental)
 		AURA = {
 			HARMFUL = {
-				188389, -- Flame Shock (Elemental)
-				CROWD_CTRL = {
-					[64695] = 'ROOT', -- Earthgrab (Restoration talent)
-					INCAPACITATE = {},
-					STUN = {},
-				},
+				8050, -- Begin Flame Shock
+				8052,
+				8053,
+				10447,
+				10448,
+				29228, -- End Flame Shock
+				8056, -- Start Frost Shock
+				8058,
+				10472,
+				10473, -- End Frost Shock
 				SNARE = {
-					3600, -- Earthbind
+					3600, -- Earthbind TODO: CHECK
 				},
-			},
-			HELPFUL = {
-				  8178, -- Grounding Totem Effect (honor talent)
-				BURST = {},
-				RAIDBUFF = {},
-				SURVIVAL = {},
-			},
-			PERSONAL = {
-				BURST = {},
-				SURVIVAL = {},
 			},
 		},
 	},
 	AURA = {
 		HARMFUL = {
-			CROWD_CTRL = {},
 			SNARE = {
 				147732, -- Frostbrand (Enhancement)
 			},
 		},
 		HELPFUL = {
-			   546, -- Water Walking
+			131, -- Water Breathing
+			546, -- Water Walking
 		},
 		PERSONAL = {
 			  2645, -- Ghost Wolf
 			  6196, -- Far Sight
-			192106, -- Lightning Shield (Enhancement talent)
+			   324, -- Start Lightning Shield
+			   325,
+			   905,
+			   945,
+			  8134,
+			 10431,
+			 10432, -- End Lightning Shield
 			196834, -- Frostbrand (Enhancement)
-			SURVIVAL = {},
 		},
 	},
 	DISPEL = {
-		[370] = 'HARMFUL MAGIC', -- Purge
+		HARMFUL = {
+			MAGIC = {
+				370, -- Purge
+				8012, -- Purge 2
+			},
+		},
 		HELPFUL = {
-			[526]   = 'POISON', -- Cure Poison
+			[526]  = 'POISON', -- Cure Poison
+			[2870] = 'DISEASE', -- Cure Disease
 		},
 	},
 }, {
 	-- map aura to provider(s)
-	[  3600] =   2484, -- Earthbind <- Earthbind Totem
+	[  3600] = 2484, -- Earthbind <- Earthbind Totem
 	--[  8178] = 204336, -- Grounding Totem Effect (honor talent) <- Grounding Totem
 
 }, {})
