@@ -62,6 +62,8 @@ lib:__RegisterSpells('SHAMAN', 11320, 2, {
 			  8134,
 			 10431,
 			 10432, -- End Lightning Shield
+			 16166, -- Elemental Mastery
+			 16188, -- Nature's Swiftness
 			196834, -- Frostbrand (Enhancement)
 		},
 	},
@@ -81,5 +83,4 @@ lib:__RegisterSpells('SHAMAN', 11320, 2, {
 	-- map aura to provider(s)
 	[  3600] = 2484, -- Earthbind <- Earthbind Totem
 	--[  8178] = 204336, -- Grounding Totem Effect (honor talent) <- Grounding Totem
-
 }, {})
