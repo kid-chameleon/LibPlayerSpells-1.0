@@ -26,8 +26,10 @@ lib:__RegisterSpells('HUNTER', 11320, 2, {
 			HARMFUL = {
 				1543, -- Flare
 				CROWD_CTRL = {
-					[19410] = 'STUN',
-					[24394] = 'STUN',
+					STUN = {
+						19410, -- Improved Concussive Shot
+						24394, -- Intimidation
+					},
 					DISORIENT = {
 						19503, -- Scatter Shot
 					},
