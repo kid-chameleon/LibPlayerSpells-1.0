@@ -32,9 +32,7 @@ lib:__RegisterSpells('RACIAL', 11320, 1, {
 			PERSONAL = {
 				  7744, -- Will of the Forsaken (Undead)
 				 20578, -- Cannibalize (Undead)
-				 20554, -- Berserking (Troll - Mana)
-				 26296, -- Berserking (Troll - Rage)
-				 26297, -- Berserking (Troll - Energy)
+				 26635, -- Berserking (Troll)
 				 20600, -- Perception (Human)
 				 20572, -- Blood Fury (Orc attack power)
 				 20508, -- Shadowmeld (Night elf)
@@ -51,5 +49,10 @@ lib:__RegisterSpells('RACIAL', 11320, 1, {
 	},
 }, {
 	-- map aura to provider(s)
-	[ 20578] =  20577, -- Cannibalize (Undead)
+	[20578] = 20577, -- Cannibalize (Undead)
+	[26635] = {
+		20554, -- Berserking (Troll - Mana)
+		26296, -- Berserking (Troll - Rage)
+		26297, -- Berserking (Troll - Energy)
+	},
 })
