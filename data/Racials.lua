@@ -22,9 +22,7 @@ local lib = LibStub('LibPlayerSpells-1.0', true)
 if not lib then return end
 lib:__RegisterSpells('RACIAL', 11320, 1, {
 	COOLDOWN = {
-		  7744, -- Will of the Forsaken (Undead)
 		 20589, -- Escape Artist (Gnome)
-		 59752, -- Every Man for Himself (Human)
 		DISPEL = {
 			PERSONAL = {
 				[ 20594] = 'DISEASE POISON', -- Stoneform (Dwarf) -- NOTE: bleeds currently not tracked
@@ -32,10 +30,14 @@ lib:__RegisterSpells('RACIAL', 11320, 1, {
 		},
 		AURA = {
 			PERSONAL = {
+				  7744, -- Will of the Forsaken (Undead)
 				 20578, -- Cannibalize (Undead)
-				 26297, -- Berserking (Troll)
+				 20554, -- Berserking (Troll - Mana)
+				 26296, -- Berserking (Troll - Rage)
+				 26297, -- Berserking (Troll - Energy)
+				 20600, -- Perception (Human)
 				 20572, -- Blood Fury (Orc attack power)
-				 58984, -- Shadowmeld (Night elf)
+				 20508, -- Shadowmeld (Night elf)
 				 20594, -- Stoneform (Dwarf)
 			},
 			HARMFUL = {
@@ -50,5 +52,4 @@ lib:__RegisterSpells('RACIAL', 11320, 1, {
 }, {
 	-- map aura to provider(s)
 	[ 20578] =  20577, -- Cannibalize (Undead)
-	[ 20594] =  20594, -- Stone Form (Dwarf)
 })
