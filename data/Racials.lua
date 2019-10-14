@@ -41,7 +41,7 @@ lib:__RegisterSpells('RACIAL', 11320, 1, {
 			HARMFUL = {
 				CROWD_CTRL = {
 					STUN = {
-						 20549, -- War Stomp (Tauren)
+						20549, -- War Stomp (Tauren)
 					},
 				},
 			},

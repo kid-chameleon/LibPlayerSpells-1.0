@@ -82,5 +82,4 @@ lib:__RegisterSpells('SHAMAN', 11320, 2, {
 }, {
 	-- map aura to provider(s)
 	[  3600] = 2484, -- Earthbind <- Earthbind Totem
-	--[  8178] = 204336, -- Grounding Totem Effect (honor talent) <- Grounding Totem
-}, {})
+})

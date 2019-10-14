@@ -65,12 +65,9 @@ lib.constants = {
 	CROWD_CTRL   = 0x40000000,
 
 	-- Sources
-	DEATHKNIGHT  = 0x00000001,
-	DEMONHUNTER  = 0x00000002,
 	DRUID        = 0x00000004,
 	HUNTER       = 0x00000008,
 	MAGE         = 0x00000010,
-	MONK         = 0x00000020,
 	PALADIN      = 0x00000040,
 	PRIEST       = 0x00000080,
 	ROGUE        = 0x00000100,
@@ -144,12 +141,9 @@ local DISPEL_TYPE_NAMES = {
 -- Convenient bitmasks
 lib.masks = {
 	CLASS = bor(
-		constants.DEATHKNIGHT,
-		constants.DEMONHUNTER,
 		constants.DRUID,
 		constants.HUNTER,
 		constants.MAGE,
-		constants.MONK,
 		constants.PALADIN,
 		constants.PRIEST,
 		constants.ROGUE,
@@ -158,12 +152,9 @@ lib.masks = {
 		constants.WARRIOR
 	),
 	SOURCE = bor(
-		constants.DEATHKNIGHT,
-		constants.DEMONHUNTER,
 		constants.DRUID,
 		constants.HUNTER,
 		constants.MAGE,
-		constants.MONK,
 		constants.PALADIN,
 		constants.PRIEST,
 		constants.ROGUE,
@@ -205,12 +196,9 @@ local spells = lib.__spells
 
 -- Spells by categories
 lib.__categories = lib.__categories or {
-	DEATHKNIGHT = {},
-	DEMONHUNTER = {},
 	DRUID       = {},
 	HUNTER      = {},
 	MAGE        = {},
-	MONK        = {},
 	PALADIN     = {},
 	PRIEST      = {},
 	ROGUE       = {},
