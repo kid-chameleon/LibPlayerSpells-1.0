@@ -105,7 +105,7 @@ These flags are used in the additional data for crowd control spells and indicat
 
 #### Spell sources
 
-These flags indicate the source of the spell. The constants are self-explanatory: `DEATHKNIGHT`, `DRUID`, `HUNTER`, `MAGE`, `MONK`, `PALADIN`, `PRIEST`, `ROGUE`, `SHAMAN`, `WARLOCK`, `WARRIOR`, `RACIAL`.
+These flags indicate the source of the spell. The constants are self-explanatory:`DRUID`, `HUNTER`, `MAGE`, `PALADIN`, `PRIEST`, `ROGUE`, `SHAMAN`, `WARLOCK`, `WARRIOR`, `RACIAL`.
 
 #### Targeting
 

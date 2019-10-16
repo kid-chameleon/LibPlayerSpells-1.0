@@ -42,11 +42,9 @@ function testDatabases:setup()
 end
 
 local sources = {
-	"Deathknight",
 	"Druid",
 	"Hunter",
 	"Mage",
-	"Monk",
 	"Paladin",
 	"Priest",
 	"Racials",
