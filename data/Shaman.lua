@@ -23,7 +23,6 @@ if not lib then return end
 lib:__RegisterSpells('SHAMAN', 11320, 2, {
 	COOLDOWN = {
 		  17364, -- Stormstrike (Enhancement)
-		  51505, -- Lava Burst (Elemental)
 		AURA = {
 			HARMFUL = {
 				8050, -- Begin Flame Shock
@@ -49,8 +48,8 @@ lib:__RegisterSpells('SHAMAN', 11320, 2, {
 			},
 		},
 		HELPFUL = {
-			131, -- Water Breathing
-			546, -- Water Walking
+			  131, -- Water Breathing
+			  546, -- Water Walking
 		},
 		PERSONAL = {
 			  2645, -- Ghost Wolf
@@ -64,7 +63,7 @@ lib:__RegisterSpells('SHAMAN', 11320, 2, {
 			 10432, -- End Lightning Shield
 			 16166, -- Elemental Mastery
 			 16188, -- Nature's Swiftness
-			196834, -- Frostbrand (Enhancement)
+			 16246, -- Clearcasting
 		},
 	},
 	DISPEL = {
@@ -82,4 +81,20 @@ lib:__RegisterSpells('SHAMAN', 11320, 2, {
 }, {
 	-- map aura to provider(s)
 	[  3600] = 2484, -- Earthbind <- Earthbind Totem
+	[ 16246] = {
+		403, -- Lightning Bolt
+		529,
+		548,
+		915,
+		943,
+		6041,
+		10391,
+		10392,
+		15207,
+		15208,
+		421, -- Chain Lightning
+		930,
+		2860,
+		10605,
+	}, -- Clearcasting
 })

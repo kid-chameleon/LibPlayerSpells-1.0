@@ -96,7 +96,9 @@ lib:__RegisterSpells('HUNTER', 11320, 2, {
 			13159, -- Aspect of the Pack
 			20043, -- Aspect of the Wild
 			20190, -- Aspect of the Wild
-			19506, -- Trueshot Aura
+			19506, -- Begin Trueshot Aura
+			20905,
+			20906, -- End Trueshot Aura
 		},
 		PERSONAL = {
 			3045, -- Rapid Fire
