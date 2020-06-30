@@ -80,18 +80,17 @@ lib:__RegisterSpells('MAGE', 11340, 2, {
 				},
 			},
 			SNARE = {
-				  2120, -- Flamestrike (Fire)
-				  116, -- Begin Frostbolt
-				  205,
-				  837,
-				  7322,
-				  8406,
-				  8407,
-				  8408,
-				  10180,
-				  10181,
-				  25304, -- End Frostbolt
-				31589, -- Slow (Arcane)
+				2120, -- Flamestrike (Fire)
+				116, -- Begin Frostbolt
+				205,
+				837,
+				7322,
+				8406,
+				8407,
+				8408,
+				10180,
+				10181,
+				25304, -- End Frostbolt
 			},
 		},
 		HELPFUL = {
