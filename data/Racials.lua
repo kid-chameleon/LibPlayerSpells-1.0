@@ -20,7 +20,7 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0', true)
 if not lib then return end
-lib:__RegisterSpells('RACIAL', 11320, 1, {
+lib:__RegisterSpells('RACIAL', 20501, 1, {
 	COOLDOWN = {
 		 20589, -- Escape Artist (Gnome)
 		DISPEL = {
@@ -39,6 +39,8 @@ lib:__RegisterSpells('RACIAL', 11320, 1, {
 				 20594, -- Stoneform (Dwarf)
 			},
 			HARMFUL = {
+				28730, -- Arcane Torrent (Mana)
+				25046, -- Arcane Torrent (Energy)
 				CROWD_CTRL = {
 					STUN = {
 						20549, -- War Stomp (Tauren)
