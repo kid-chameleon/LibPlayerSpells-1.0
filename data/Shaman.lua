@@ -41,7 +41,7 @@ lib:__RegisterSpells('SHAMAN', 20501, 2, {
 					3600, -- Earthbind TODO: CHECK
 				},
 			},
-			HEPLFUL = {
+			HELPFUL = {
 				2825, -- Bloodlust
 			   32182, -- Heroism
 			}

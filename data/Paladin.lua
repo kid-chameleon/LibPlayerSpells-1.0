@@ -87,7 +87,7 @@ lib:__RegisterSpells('PALADIN', 22501, 1, {
 			19837,
 			19838,
 			25291,
-			27140.-- End Blessing of Might
+			27140,-- End Blessing of Might
 			1038, -- Blessing of Salvation
 			20911, -- Begin Blessing of Sanctuary
 			20912,
