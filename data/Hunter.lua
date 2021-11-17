@@ -77,13 +77,11 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 			13554,
 			13555,
 			25295,
-			13554,
-			27016, -- End Serpent Sting
+			13554, -- End Serpent Sting
 			5116, -- Concussive Shot
 			3034, -- Begin Viper Sting
 			14279,
-			14280,
-			27018, -- End Viper Sting
+			14280, -- End Viper Sting
 			2974, -- Begin Wing Clip
 			14267,
 			14268, -- End Wing Clip
@@ -96,10 +94,8 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 		},
 		HELPFUL = {
 			13159, -- Aspect of the Pack
-			20043, -- Begin Aspect of the Wild
-			20190,
-			27045, -- End Aspect of the Wild
-			34477, -- Misdirection
+			20043, -- Aspect of the Wild
+			20190, -- Aspect of the Wild
 		},
 		PERSONAL = {
 			3045, -- Rapid Fire
@@ -114,9 +110,7 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 			14321,
 			14322,
 			25296,
-			14321,
-			27044, -- End Aspect of the Hawk
-			34074, -- Aspect of the Viper
+			14321, -- End Aspect of the Hawk
 			19506, -- Begin Trueshot Aura
 			20905,
 			20906, -- End Trueshot Aura
