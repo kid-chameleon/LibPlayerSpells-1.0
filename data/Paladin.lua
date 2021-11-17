@@ -20,11 +20,12 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-lib:__RegisterSpells('PALADIN', 11305, 1, {
+lib:__RegisterSpells('PALADIN', 22501, 1, {
 	COOLDOWN = {
 		    633, -- Lay on Hands
 		  20473, -- Holy Shock (Holy)
-		  24275, -- Hammer of Wrath (Retribution talent)
+		  24275, -- Hammer of Wrath
+		  27180, -- Hammer of Wrath
 		AURA = {
 			HARMFUL = {
 				CROWD_CTRL = {
@@ -52,7 +53,7 @@ lib:__RegisterSpells('PALADIN', 11305, 1, {
 				},
 			},
 			PERSONAL = {
-				--[199448] = 'INVERT_AURA', -- Blessing of Sacrifice (Holy honor talent) -- NOTE: from Ultimate Sacrifice
+				31884, -- Avenging Wrath
 				SURVIVAL = {
 					498, -- Divine Protection (Holy)
 					642, -- Divine Shield
@@ -77,29 +78,35 @@ lib:__RegisterSpells('PALADIN', 11305, 1, {
 			1044, -- Blessing of Freedom
 			19977, -- Begin Blessing of Light
 			19978,
-			19979, -- End Blessing of Light
+			19979,
+			27144, -- End Blessing of Light
 			19740, -- Begin Blessing of Might
 			19834,
 			19835,
 			19836,
 			19837,
 			19838,
-			25291, -- End Blessing of Might
+			25291,
+			27140,-- End Blessing of Might
 			1038, -- Blessing of Salvation
 			20911, -- Begin Blessing of Sanctuary
 			20912,
 			20913,
-			20914, -- End Blessing of Sanctuary
+			20914,
+			27168, -- End Blessing of Sanctuary
 			19742, -- Begin Blessing of Wisdom
 			19850,
 			19852,
 			19853,
 			19854,
-			25290, -- End Blessing of Wisdom
+			25290,
+			27142, -- End Blessing of Wisdom
 			20217, -- Blessing of Kings
 			SURVIVAL = {
-				6940,  -- Blessing of Sacrifice (Holy/Protection)
-				20729, -- Blessing of Sacrifice
+				6940, -- Begin Blessing of Sacrifice
+				20729,
+				27147,
+				27148, -- End Blessing of Sacrifice
 			},
 		},
 		PERSONAL = {
@@ -110,29 +117,35 @@ lib:__RegisterSpells('PALADIN', 11305, 1, {
 			10291,
 			1032,
 			10292,
-			10293, -- End Devotion Aura
+			10293,
+			27149, -- End Devotion Aura
 			19891, -- Begin Fire Resistance Aura
 			19899,
-			19900, -- End Fire Resistance Aura
+			19900,
+			27153, -- End Fire Resistance Aura
 			19888, -- Begin Frost Resistance Aura
 			19897,
-			19898, -- End Frost Resistance Aura
+			19898,
+			27152, -- End Frost Resistance Aura
 			7294, -- Begin Retribution Aura
 			10298,
 			10299,
 			10300,
-			10301, -- End Retribution Aura
+			10301,
+			27150, -- End Retribution Aura
 			25780, -- Righteous Fury
 			20375, -- Begin Seal of Command
 			20915,
 			20918,
 			20919,
-			20920, -- End Seal of Command
+			20920,
+			27170, -- End Seal of Command
 			20164, -- Seal of Justice
 			20165, -- Begin Seal of Light
 			20347,
 			20348,
-			20349, -- End Seal of Light
+			20349,
+			27160, -- End Seal of Light
 			20154, -- Begin Seal of Righteousness
 			21084,
 			20287,
@@ -141,20 +154,33 @@ lib:__RegisterSpells('PALADIN', 11305, 1, {
 			20290,
 			20291,
 			20292,
-			20293, -- End Seal of Righteousness
+			20293,
+			27155, -- End Seal of Righteousness
 			21082, -- Begin Seal of the Crusader
 			20162,
 			20305,
 			20306,
 			20307,
-			20308, -- End Seal of the Crusader
+			20308,
+			27158, -- End Seal of the Crusader
 			20166, -- Begin Seal of Wisdom
 			20356,
-			20357, -- End Seal of Wisdom
+			20357,
+			27166, -- End Seal of Wisdom
+			31801, -- Seal of Vengeance
+			31892, -- Seal of Blood
+			348700, -- Seal of the Martyr
+			348704, -- Seal of Corruption
 			19876, -- Begin Shadow Resistance Aura
 			19895,
-			19896, -- End Shadow Resistance Aura
+			19896,
+			27151, -- End Shadow Resistance Aura
 			20218, -- Sanctity Aura
+			32223, -- Crusader Aura
+			20925, -- Begin Holy Shield
+			20927,
+			20928,
+			27179, -- End Holy Shield
 		},
 	},
 }, {
@@ -166,6 +192,7 @@ lib:__RegisterSpells('PALADIN', 11305, 1, {
 		   498, -- Divine Protection
 		  5573, -- Divine Protection
 		  1022, -- Blessing of Protection
+		 31884, -- Avenging Wrath
 	},
 	[ 20183] = 20164, -- Judgement (Seal of Justice)
 	[ 21183] = 21082, -- Begin Judgement of the Crus

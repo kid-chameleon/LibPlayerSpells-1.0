@@ -30,15 +30,21 @@ lib:__RegisterSpells('SHAMAN', 20501, 2, {
 				8053,
 				10447,
 				10448,
-				29228, -- End Flame Shock
+				29228,
+				25457, -- End Flame Shock
 				8056, -- Start Frost Shock
 				8058,
 				10472,
-				10473, -- End Frost Shock
+				10473,
+				25464, -- End Frost Shock
 				SNARE = {
 					3600, -- Earthbind TODO: CHECK
 				},
 			},
+			HELPFUL = {
+				2825, -- Bloodlust
+			   32182, -- Heroism
+			}
 		},
 	},
 	AURA = {
@@ -60,10 +66,15 @@ lib:__RegisterSpells('SHAMAN', 20501, 2, {
 			   945,
 			  8134,
 			 10431,
-			 10432, -- End Lightning Shield
+			 10432,
+			 25469,
+			 25472, -- End Lightning Shield
 			 16166, -- Elemental Mastery
 			 16188, -- Nature's Swiftness
 			 16246, -- Clearcasting
+			 24398, -- Begin Water Shield
+			 33736, -- End Water Shield
+
 		},
 	},
 	DISPEL = {
