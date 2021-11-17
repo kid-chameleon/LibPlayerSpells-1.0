@@ -39,8 +39,6 @@ lib:__RegisterSpells('RACIAL', 20501, 1, {
 				 20594, -- Stoneform (Dwarf)
 			},
 			HARMFUL = {
-				28730, -- Arcane Torrent (Mana)
-				25046, -- Arcane Torrent (Energy)
 				CROWD_CTRL = {
 					STUN = {
 						20549, -- War Stomp (Tauren)
