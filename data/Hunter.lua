@@ -22,10 +22,16 @@ local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
 lib:__RegisterSpells('HUNTER', 20501, 2, {
 	COOLDOWN = {
+		53351, -- Begin Kill Shot
+		61005,
+		61006, -- End Kill Shot
 		AURA = {
 			HARMFUL = {
 				1543, -- Flare
 				CROWD_CTRL = {
+					TAUNT = {
+						20736, -- Distracting Shot
+					},
 					STUN = {
 						19410, -- Improved Concussive Shot
 						24394, -- Intimidation
@@ -50,6 +56,7 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 			PERSONAL = {
 				3045, -- Rapid Fire
 				5384, -- Feign Death
+				19263, -- Deterrence
 			},
 			PET = {
 				13542, -- Mend Pet
@@ -57,6 +64,7 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 				24450, -- Prowl (cat)
 				23019, -- Dash (Ferocity/Cunning pet)
 				19574, -- Bestial Wrath
+				34026, -- Kill Command
 			},
 		},
 	},
@@ -91,14 +99,16 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 				1130, -- Begin Hunter's Mark
 				14323,
 				14324,
-				14325, --  End Hunter's Mark
+				14325,
+				53338, --  End Hunter's Mark
 			},
 		},
 		HELPFUL = {
 			13159, -- Aspect of the Pack
 			20043, -- Begin Aspect of the Wild
 			20190,
-			27045, -- End Aspect of the Wild
+			27045,
+			49071, -- End Aspect of the Wild
 			34477, -- Misdirection
 		},
 		PERSONAL = {
@@ -117,6 +127,8 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 			14321,
 			27044, -- End Aspect of the Hawk
 			34074, -- Aspect of the Viper
+			61846, -- Begin Aspect of the Dragonhawk
+			61847, -- End Aspect of the Dragonhawk
 			19506, -- Begin Trueshot Aura
 			20905,
 			20906, -- End Trueshot Aura
@@ -124,11 +136,11 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 	},
 }, {
 	-- map aura to provider(s)
-	[  3355] = { -- Freezing Trap
-		  1499, -- Freezing Trap
-		 14310,
+	[3355] = { -- Freezing Trap
+		1499, -- Freezing Trap
+		14310,
 	},
-	[ 24394] =  19577, -- Intimidation (Beast Mastery/Survival)
-	[132951] =   1543, -- Flare
-	[ 19410] =   5116, -- Improved Concussive Shot
+	[24394] = 19577, -- Intimidation (Beast Mastery/Survival)
+	[132951] = 1543, -- Flare
+	[19410] = 5116, -- Improved Concussive Shot
 }, {})
