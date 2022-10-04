@@ -110,6 +110,16 @@ lib:__RegisterSpells('HUNTER', 30400, 2, {
 			27065,
 			49049,
 			49050, -- End Aimed Shot
+			53301, -- Begin Explosive Shot
+			60051,
+			60052,
+			60053, -- End Explosive Shot
+			3674, -- Begin Black Arrow
+			63668,
+			63669,
+			63670,
+			63671,
+			63672, -- End Black Arrow
 			UNIQUE_AURA = {
 				1130, -- Begin Hunter's Mark
 				14323,
@@ -124,7 +134,6 @@ lib:__RegisterSpells('HUNTER', 30400, 2, {
 			20190,
 			27045,
 			49071, -- End Aspect of the Wild
-			34477, -- Misdirection
 		},
 		PERSONAL = {
 			3045, -- Rapid Fire
@@ -144,9 +153,8 @@ lib:__RegisterSpells('HUNTER', 30400, 2, {
 			34074, -- Aspect of the Viper
 			61846, -- Begin Aspect of the Dragonhawk
 			61847, -- End Aspect of the Dragonhawk
-			19506, -- Begin Trueshot Aura
-			20905,
-			20906, -- End Trueshot Aura
+			19506, -- Trueshot Aura
+			34477, -- Misdirection
 		},
 	},
 }, {
