@@ -20,7 +20,7 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-lib:__RegisterSpells('HUNTER', 20501, 2, {
+lib:__RegisterSpells('HUNTER', 30400, 2, {
 	COOLDOWN = {
 		53351, -- Begin Kill Shot
 		61005,
@@ -59,7 +59,16 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 				19263, -- Deterrence
 			},
 			PET = {
-				13542, -- Mend Pet
+				136, -- Begin Mend Pet
+				3111,
+				3661,
+				3662,
+				13542,
+				13543,
+				13544,
+				27046,
+				48989,
+				48990, -- End Mend Pet
 				19577, -- Intimidation (Beast Mastery/Survival)
 				24450, -- Prowl (cat)
 				23019, -- Dash (Ferocity/Cunning pet)
@@ -67,15 +76,15 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 				34026, -- Kill Command
 			},
 		},
+		DISPEL = {
+			[19801] = 'HARMFUL MAGIC ENRAGE', -- Tranquilizing Shot
+		},
 	},
 	AURA = {
 		HARMFUL = {
 			1462, -- Beast Lore -- NOTE: HELPFUL on player controlled pets
 			1515, -- Tame Beast
-			3043, -- Begin Scorpid Sting
-			14275,
-			14276,
-			14277, -- End Scorpid Sting
+			3043, -- Scorpid Sting
 			1978, -- Begin Serpent Sting
 			13549,
 			13550,
@@ -86,15 +95,21 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 			13555,
 			25295,
 			13554,
-			27016, -- End Serpent Sting
+			27016,
+			49000,
+			49001, -- End Serpent Sting
 			5116, -- Concussive Shot
-			3034, -- Begin Viper Sting
-			14279,
-			14280,
-			27018, -- End Viper Sting
-			2974, -- Begin Wing Clip
-			14267,
-			14268, -- End Wing Clip
+			3034, -- Viper Sting
+			2974, -- Wing Clip
+			19434, -- Begin Aimed Shot
+			20900,
+			20901,
+			20902,
+			20903,
+			20904,
+			27065,
+			49049,
+			49050, -- End Aimed Shot
 			UNIQUE_AURA = {
 				1130, -- Begin Hunter's Mark
 				14323,
