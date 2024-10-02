@@ -68,7 +68,6 @@ lib.constants = {
 	WARLOCK      = 0x00000400,
 	WARRIOR      = 0x00000800,
 	RACIAL       = 0x00001000, -- Racial trait
-	EVOKER       = 0x00002000,
 
 	-- Crowd control types, *requires* CROWD_CTRL, else this messes up sources
 	DISORIENT    = 0x00000001,
@@ -136,7 +135,6 @@ local DISPEL_TYPE_NAMES = {
 lib.masks = {
 	CLASS = bor(
 		constants.DRUID,
-		constants.EVOKER,
 		constants.HUNTER,
 		constants.MAGE,
 		constants.PALADIN,
@@ -148,7 +146,6 @@ lib.masks = {
 	),
 	SOURCE = bor(
 		constants.DRUID,
-		constants.EVOKER,
 		constants.HUNTER,
 		constants.MAGE,
 		constants.PALADIN,
@@ -193,7 +190,6 @@ local spells = lib.__spells
 -- Spells by categories
 lib.__categories = lib.__categories or {
 	DRUID       = {},
-	EVOKER      = {},
 	HUNTER      = {},
 	MAGE        = {},
 	PALADIN     = {},
