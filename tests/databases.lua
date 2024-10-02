@@ -1,6 +1,6 @@
 --[[
 LibPlayerSpells-1.0 - Additional information about player spells.
-(c) 2013-2014 Adirelle (adirelle@gmail.com)
+(c) 2013-2021 Adirelle (adirelle@gmail.com)
 
 This file is part of LibPlayerSpells-1.0.
 
@@ -19,7 +19,7 @@ along with LibPlayerSpells-1.0.  If not, see <http://www.gnu.org/licenses/>.
 --]]
 
 package.path = package.path .. ";./wowmock/?.lua"
-local LuaUnit = require('luaunit')
+local lu = require('luaunit')
 local mockagne = require('mockagne')
 local wowmock = require('wowmock')
 
@@ -54,17 +54,16 @@ local sources = {
 	"Warrior",
 }
 
-for i, source in ipairs(sources) do
-	local source = source
-	testDatabases["test"..source] = function()
+for _, source in ipairs(sources) do
+	testDatabases["test"..source] = function ()
 		wowmock("../data/"..source..".lua", G)
 	end
 end
 
 function testDatabases:testAllAtOnce()
-	for i, source in ipairs(sources) do
+	for _, source in ipairs(sources) do
 		wowmock("../data/"..source..".lua", G)
 	end
 end
 
-os.exit(LuaUnit:Run())
+os.exit(lu.LuaUnit.run())
