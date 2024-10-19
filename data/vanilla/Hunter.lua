@@ -20,7 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-lib:__RegisterSpells('HUNTER', 11504, 1, {
+if lib.flavor ~= 'vanilla' then return end
+lib:__RegisterSpells('HUNTER', 11508, 1, {
 	COOLDOWN = {
 		AURA = {
 			HARMFUL = {
@@ -34,8 +35,9 @@ lib:__RegisterSpells('HUNTER', 11504, 1, {
 						19503, -- Scatter Shot
 					},
 					INCAPACITATE = {
-						3355, -- Freezing Trap
-						14309, -- Freezing Trap (Trap Launcher)
+						3355, -- Begin Freezing Trap Effect
+						14308,
+						14309, -- End Freezing Trap Effect
 						1513, -- Begin Scare Beast
 						14326,
 						14327, -- End Scare Beast
@@ -45,19 +47,29 @@ lib:__RegisterSpells('HUNTER', 11504, 1, {
 					},
 				},
 				SNARE = {
-					5116, -- Concussive Shot (Marksmanship)
-					13810, -- Frost Trap
+					13810, -- Frost Trap Aura
 				},
 			},
 			PERSONAL = {
 				3045, -- Rapid Fire
 				5384, -- Feign Death
+				19263, -- Deterrence
 			},
 			PET = {
-				13542, -- Mend Pet
+				136, -- Begin Mend Pet
+				3111,
+				3661,
+				3662,
+				13542,
+				13543,
+				13544, -- End Mend Pet
 				19577, -- Intimidation (Beast Mastery/Survival)
-				24450, -- Prowl (cat)
-				23019, -- Dash (Ferocity/Cunning pet)
+				24450, -- Begin Prowl (cat)
+				24452,
+				24453, -- End Prowl (cat)
+				23099, -- Begin Dash (Ferocity/Cunning pet)
+				23109,
+				23110, -- End Dash (Ferocity/Cunning pet)
 				19574, -- Bestial Wrath
 			},
 		},
@@ -78,35 +90,32 @@ lib:__RegisterSpells('HUNTER', 11504, 1, {
 			13553,
 			13554,
 			13555,
-			25295,
-			13554,
-			27016, -- End Serpent Sting
+			25295, -- End Serpent Sting
 			425736, -- Serpent Spread
-			5116, -- Concussive Shot
 			3034, -- Begin Viper Sting
 			14279,
-			14280,
-			27018, -- End Viper Sting
+			14280, -- End Viper Sting
 			2974, -- Begin Wing Clip
 			14267,
 			14268, -- End Wing Clip
-			14301, -- Begin Immolation Trap
-			14302,
-			14303,
-			14304,
-			14035, -- End Immolation Trap
-			409521, -- Begin Immolation Trap (Trap Launcher)
-			409524,
-			409526,
-			409528,
-			409530, -- End Immolation Trap (Trap Launcher)
-			13813, -- Begin Explosive Trap
-			14316,
-			14315,
-			14317, -- End Explosive Trap
-			409532, -- Begin Explosive Trap (Trap Launcher)
-			409534,
-			409535, -- End Explosive Trap (Trap Launcher)
+			13797, -- Begin Immolation Trap Effect
+			14298,
+			14299,
+			14300,
+			14301, -- End Immolation Trap Effect
+			13812, -- Begin Explosive Trap Effect
+			14314,
+			14315, -- End Explosive Trap Effect
+			CROWD_CTRL = {
+				ROOT = {
+					19306, -- Begin Counterattack
+					20909,
+					20910, -- End Counterattack
+				},
+			},
+			SNARE = {
+				5116, -- Concussive Shot
+			},
 			UNIQUE_AURA = {
 				1130, -- Begin Hunter's Mark
 				14323,
@@ -117,9 +126,7 @@ lib:__RegisterSpells('HUNTER', 11504, 1, {
 		HELPFUL = {
 			13159, -- Aspect of the Pack
 			20043, -- Begin Aspect of the Wild
-			20190,
-			27045, -- End Aspect of the Wild
-			34477, -- Misdirection
+			20190, -- End Aspect of the Wild
 			409583, -- Aspect of the Lion
 		},
 		PERSONAL = {
@@ -134,9 +141,7 @@ lib:__RegisterSpells('HUNTER', 11504, 1, {
 			14320,
 			14321,
 			14322,
-			25296,
-			14321,
-			27044, -- End Aspect of the Hawk
+			25296, -- End Aspect of the Hawk
 			415423, -- Aspect of the Viper
 			19506, -- Begin Trueshot Aura
 			20905,
@@ -147,24 +152,25 @@ lib:__RegisterSpells('HUNTER', 11504, 1, {
 		},
 	},
 }, {
-	-- map aura to provider(s)
-	[3355] = { -- Freezing Trap
-		1499, -- Freezing Trap
-		14310,
-	},
-	[409396] = {  -- Kill Command Personal Aura
-		409379,   -- Kill Command Spell ID
-	},
+	-- map aura to provider(s); traps list the base trap plus the SoD
+	-- Trap Launcher variant, rank by rank
+	[3355] = { 1499, 409510 }, -- Freezing Trap Effect
+	[14308] = { 14310, 409512 },
+	[14309] = { 14311, 409519 },
+	[13797] = { 13795, 409521 }, -- Immolation Trap Effect
+	[14298] = { 14302, 409524 },
+	[14299] = { 14303, 409526 },
+	[14300] = { 14304, 409528 },
+	[14301] = { 14305, 409530 },
+	[13812] = { 13813, 409532 }, -- Explosive Trap Effect
+	[14314] = { 14316, 409534 },
+	[14315] = { 14317, 409535 },
+	[13810] = { 13809, 409520 }, -- Frost Trap Aura
+	[409396] = 409379, -- Kill Command (SoD rune)
 	[24394] = 19577, -- Intimidation (Beast Mastery/Survival)
-	[132951] = 1543, -- Flare
 	[19410] = 5116, -- Improved Concussive Shot
-	[425736] = {  -- Serpent Spread
+	[425736] = { -- Serpent Spread (SoD)
 		13555,
-		25295,
-		27016,     -- End Serpent Sting
+		25295, -- End Serpent Sting
 	},
-	[14315] = 409535, -- Explosive Trap (Trap Launcher)
-	[14301] = 409530, -- Immolation Trap (Trap Launcher)
-	[14309] = 409519, -- Freezing Trap (Trap Launcher)
-	[13810] = 409520, -- Frost Trap (Trap Launcher)
 }, {})
