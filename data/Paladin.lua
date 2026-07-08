@@ -1,6 +1,6 @@
 --[[
 LibPlayerSpells-1.0 - Additional information about player spells.
-(c) 2013-2021 Adirelle (adirelle@gmail.com)
+(c) 2013-2018 Adirelle (adirelle@gmail.com)
 
 This file is part of LibPlayerSpells-1.0.
 
@@ -22,16 +22,17 @@ local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
 lib:__RegisterSpells('PALADIN', 22501, 1, {
 	COOLDOWN = {
-		    633, -- Lay on Hands
-		  20473, -- Holy Shock (Holy)
-		  24275, -- Hammer of Wrath
-		  27180, -- Hammer of Wrath
+		633, -- Lay on Hands
+		20473, -- Holy Shock (Holy)
+		24275, -- Hammer of Wrath
+		27180, -- Hammer of Wrath
 		AURA = {
 			HARMFUL = {
 				CROWD_CTRL = {
-					[ 20066] = 'INCAPACITATE', -- Repentance (talent)
+					[20066] = 'INCAPACITATE', -- Repentance (talent)
+					[407631] = 'TAUNT', -- Hand of Reckoning
 					DISORIENT = {
-						2878, -- Begin Turn Undead
+						2878,  -- Begin Turn Undead
 						5627,
 						10326, -- End Turn Undead
 					},
@@ -42,14 +43,17 @@ lib:__RegisterSpells('PALADIN', 22501, 1, {
 						10308, -- End Hammer of Justice
 					},
 				},
+				SNARE = {
+					407669, -- Avenger's Shield
+				}
 			},
 			HELPFUL = {
-				   1044, -- Blessing of Freedom
-				[ 25771] = 'INVERT_AURA', -- Forbearance
+				1044,        -- Blessing of Freedom
+				[25771] = 'INVERT_AURA', -- Forbearance
 				SURVIVAL = {
-					  1022, -- Begin Blessing of Protection
-					  5599,
-					  10278, -- End Blessing of Protection
+					1022,    -- Begin Blessing of Protection
+					5599,
+					10278,   -- End Blessing of Protection
 				},
 			},
 			PERSONAL = {
@@ -65,14 +69,17 @@ lib:__RegisterSpells('PALADIN', 22501, 1, {
 		},
 		DISPEL = {
 			HELPFUL = {
-				[  4987] = 'DISEASE POISON MAGIC', -- Cleanse (Holy)
-				[ 1152 ] = 'DISEASE POISON', -- Purify
+				[4987] = 'DISEASE POISON MAGIC', -- Cleanse (Holy)
+				[1152] = 'DISEASE POISON', -- Purify
 			},
 		},
 	},
 	AURA = {
 		HARMFUL = {
 			21183, -- Begin Judgement of the Crusader
+			20188,
+			20300, -- End Judgment of the Crusader
+			20184, -- Judgement of Justice
 		},
 		HELPFUL = {
 			1044, -- Blessing of Freedom
@@ -87,7 +94,7 @@ lib:__RegisterSpells('PALADIN', 22501, 1, {
 			19837,
 			19838,
 			25291,
-			27140,-- End Blessing of Might
+			27140, -- End Blessing of Might
 			1038, -- Blessing of Salvation
 			20911, -- Begin Blessing of Sanctuary
 			20912,
@@ -134,6 +141,7 @@ lib:__RegisterSpells('PALADIN', 22501, 1, {
 			10301,
 			27150, -- End Retribution Aura
 			25780, -- Righteous Fury
+			407627, -- Improved Righteous Fury (Hand of Reckoning)
 			20375, -- Begin Seal of Command
 			20915,
 			20918,
@@ -181,19 +189,22 @@ lib:__RegisterSpells('PALADIN', 22501, 1, {
 			20927,
 			20928,
 			27179, -- End Holy Shield
+			425600, -- Horn of Lordaeron
 		},
 	},
 }, {
 	-- map aura to provider(s)
-	[ 25771] = { -- Forbearance
-		   633, -- Lay on Hands
-		   642, -- Divine Shield
-		  1020, -- Divine Shield
-		   498, -- Divine Protection
-		  5573, -- Divine Protection
-		  1022, -- Blessing of Protection
-		 31884, -- Avenging Wrath
+	[25771] = {   -- Forbearance
+		633,      -- Lay on Hands
+		642,      -- Divine Shield
+		1020,     -- Divine Shield
+		498,      -- Divine Protection
+		5573,     -- Divine Protection
+		1022,     -- Blessing of Protection
+		31884,    -- Avenging Wrath
 	},
-	[ 20183] = 20164, -- Judgement (Seal of Justice)
-	[ 21183] = 21082, -- Begin Judgement of the Crus
+	[21183] = 21082, -- Begin Judgement of the Crusader
+	[20188] = 20162,
+	[20300] = 20305, -- End Judgement of the Crusader
+	[20184] = 20164, -- Judgement of Justice
 }, {})

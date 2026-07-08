@@ -20,7 +20,7 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-lib:__RegisterSpells('HUNTER', 20501, 2, {
+lib:__RegisterSpells('HUNTER', 11504, 1, {
 	COOLDOWN = {
 		AURA = {
 			HARMFUL = {
@@ -35,6 +35,7 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 					},
 					INCAPACITATE = {
 						3355, -- Freezing Trap
+						14309, -- Freezing Trap (Trap Launcher)
 						1513, -- Begin Scare Beast
 						14326,
 						14327, -- End Scare Beast
@@ -45,6 +46,7 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 				},
 				SNARE = {
 					5116, -- Concussive Shot (Marksmanship)
+					13810, -- Frost Trap
 				},
 			},
 			PERSONAL = {
@@ -79,6 +81,7 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 			25295,
 			13554,
 			27016, -- End Serpent Sting
+			425736, -- Serpent Spread
 			5116, -- Concussive Shot
 			3034, -- Begin Viper Sting
 			14279,
@@ -87,6 +90,23 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 			2974, -- Begin Wing Clip
 			14267,
 			14268, -- End Wing Clip
+			14301, -- Begin Immolation Trap
+			14302,
+			14303,
+			14304,
+			14035, -- End Immolation Trap
+			409521, -- Begin Immolation Trap (Trap Launcher)
+			409524,
+			409526,
+			409528,
+			409530, -- End Immolation Trap (Trap Launcher)
+			13813, -- Begin Explosive Trap
+			14316,
+			14315,
+			14317, -- End Explosive Trap
+			409532, -- Begin Explosive Trap (Trap Launcher)
+			409534,
+			409535, -- End Explosive Trap (Trap Launcher)
 			UNIQUE_AURA = {
 				1130, -- Begin Hunter's Mark
 				14323,
@@ -100,6 +120,7 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 			20190,
 			27045, -- End Aspect of the Wild
 			34477, -- Misdirection
+			409583, -- Aspect of the Lion
 		},
 		PERSONAL = {
 			3045, -- Rapid Fire
@@ -116,19 +137,34 @@ lib:__RegisterSpells('HUNTER', 20501, 2, {
 			25296,
 			14321,
 			27044, -- End Aspect of the Hawk
-			34074, -- Aspect of the Viper
+			415423, -- Aspect of the Viper
 			19506, -- Begin Trueshot Aura
 			20905,
 			20906, -- End Trueshot Aura
+			409396, -- Kill Command
+			409580, -- Aspect of the Lion
+			469145, -- Aspect of the Falcon
 		},
 	},
 }, {
 	-- map aura to provider(s)
-	[  3355] = { -- Freezing Trap
-		  1499, -- Freezing Trap
-		 14310,
+	[3355] = { -- Freezing Trap
+		1499, -- Freezing Trap
+		14310,
 	},
-	[ 24394] =  19577, -- Intimidation (Beast Mastery/Survival)
-	[132951] =   1543, -- Flare
-	[ 19410] =   5116, -- Improved Concussive Shot
+	[409396] = {  -- Kill Command Personal Aura
+		409379,   -- Kill Command Spell ID
+	},
+	[24394] = 19577, -- Intimidation (Beast Mastery/Survival)
+	[132951] = 1543, -- Flare
+	[19410] = 5116, -- Improved Concussive Shot
+	[425736] = {  -- Serpent Spread
+		13555,
+		25295,
+		27016,     -- End Serpent Sting
+	},
+	[14315] = 409535, -- Explosive Trap (Trap Launcher)
+	[14301] = 409530, -- Immolation Trap (Trap Launcher)
+	[14309] = 409519, -- Freezing Trap (Trap Launcher)
+	[13810] = 409520, -- Frost Trap (Trap Launcher)
 }, {})
