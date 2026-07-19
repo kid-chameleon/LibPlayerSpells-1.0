@@ -20,7 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0', true)
 if not lib then return end
-lib:__RegisterSpells('RACIAL', 20501, 1, {
+if lib.flavor ~= 'vanilla' then return end
+lib:__RegisterSpells('RACIAL', 11508, 1, {
 	COOLDOWN = {
 		 20589, -- Escape Artist (Gnome)
 		DISPEL = {
@@ -35,12 +36,10 @@ lib:__RegisterSpells('RACIAL', 20501, 1, {
 				 26635, -- Berserking (Troll)
 				 20600, -- Perception (Human)
 				 20572, -- Blood Fury (Orc attack power)
-				 20508, -- Shadowmeld (Night elf)
+				 20580, -- Shadowmeld (Night elf)
 				 20594, -- Stoneform (Dwarf)
 			},
 			HARMFUL = {
-				28730, -- Arcane Torrent (Mana)
-				25046, -- Arcane Torrent (Energy)
 				CROWD_CTRL = {
 					STUN = {
 						20549, -- War Stomp (Tauren)

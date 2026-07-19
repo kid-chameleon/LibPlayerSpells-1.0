@@ -18,7 +18,7 @@ You should have received a copy of the GNU General Public License
 along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 --]]
 
-local MAJOR, MINOR, lib = "LibPlayerSpells-1.0", 15
+local MAJOR, MINOR, lib = "LibPlayerSpells-1.0", 16
 if LibStub then
 	local oldMinor
 	lib, oldMinor = LibStub:NewLibrary(MAJOR, MINOR)
@@ -50,6 +50,14 @@ local bor = _G.bit.bor
 local band = _G.bit.band
 local bxor = _G.bit.bxor
 local bnot = _G.bit.bnot
+
+-- Game flavor detection, used to select the per-flavor data files.
+-- The globals may be absent in the test environment; default to vanilla.
+local FLAVORS = { [0] = 'vanilla', [1] = 'tbc', [2] = 'wrath', [3] = 'cata' }
+lib.expansion = _G.LE_EXPANSION_LEVEL_CURRENT or 0
+lib.flavor = FLAVORS[lib.expansion] or 'vanilla'
+lib.isSoD = _G.C_Seasons and _G.C_Seasons.HasActiveSeason()
+	and _G.C_Seasons.GetActiveSeason() == _G.Enum.SeasonID.SeasonOfDiscovery or false
 
 -- Basic constants use for the bitfields
 lib.constants = {

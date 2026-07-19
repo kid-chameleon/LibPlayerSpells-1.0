@@ -1,4 +1,4 @@
-## Interface: 110000
+## Interface: 11508, 20506
 ## Title: Lib: PlayerSpells-1.0
 ## Notes: Additional information about player spells.
 ## Author: Adirelle
