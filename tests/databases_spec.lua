@@ -11,7 +11,6 @@ local ROOT_SOURCES = {
 	'Mage',
 	'Priest',
 	'Rogue',
-	'Shaman',
 	'Warlock',
 }
 
@@ -19,10 +18,12 @@ local FLAVORED_SOURCES = {
 	{ path = 'vanilla/Hunter', category = 'HUNTER', interface = 11508 },
 	{ path = 'vanilla/Paladin', category = 'PALADIN', interface = 11508 },
 	{ path = 'vanilla/Racials', category = 'RACIAL', interface = 11508 },
+	{ path = 'vanilla/Shaman', category = 'SHAMAN', interface = 11508 },
 	{ path = 'vanilla/Warrior', category = 'WARRIOR', interface = 11508 },
 	{ path = 'tbc/Hunter', category = 'HUNTER', interface = 20506 },
 	{ path = 'tbc/Paladin', category = 'PALADIN', interface = 20506 },
 	{ path = 'tbc/Racials', category = 'RACIAL', interface = 20506 },
+	{ path = 'tbc/Shaman', category = 'SHAMAN', interface = 20506 },
 	{ path = 'tbc/Warrior', category = 'WARRIOR', interface = 20506 },
 }
 
