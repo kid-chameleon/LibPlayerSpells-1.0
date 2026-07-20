@@ -3,10 +3,12 @@
 	<Script file="LibPlayerSpells-1.0.lua"/>
 	<Script file="data\vanilla\Racials.lua"/>
 	<Script file="data\tbc\Racials.lua"/>
-	<Script file="data\Druid.lua"/>
+	<Script file="data\vanilla\Druid.lua"/>
+	<Script file="data\tbc\Druid.lua"/>
 	<Script file="data\vanilla\Hunter.lua"/>
 	<Script file="data\tbc\Hunter.lua"/>
-	<Script file="data\Mage.lua"/>
+	<Script file="data\vanilla\Mage.lua"/>
+	<Script file="data\tbc\Mage.lua"/>
 	<Script file="data\vanilla\Paladin.lua"/>
 	<Script file="data\tbc\Paladin.lua"/>
 	<Script file="data\vanilla\Priest.lua"/>
