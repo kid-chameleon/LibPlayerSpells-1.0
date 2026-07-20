@@ -11,7 +11,8 @@
 	<Script file="data\tbc\Paladin.lua"/>
 	<Script file="data\vanilla\Priest.lua"/>
 	<Script file="data\tbc\Priest.lua"/>
-	<Script file="data\Rogue.lua"/>
+	<Script file="data\vanilla\Rogue.lua"/>
+	<Script file="data\tbc\Rogue.lua"/>
 	<Script file="data\vanilla\Shaman.lua"/>
 	<Script file="data\tbc\Shaman.lua"/>
 	<Script file="data\Warlock.lua"/>
