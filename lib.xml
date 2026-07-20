@@ -17,7 +17,8 @@
 	<Script file="data\tbc\Rogue.lua"/>
 	<Script file="data\vanilla\Shaman.lua"/>
 	<Script file="data\tbc\Shaman.lua"/>
-	<Script file="data\Warlock.lua"/>
+	<Script file="data\vanilla\Warlock.lua"/>
+	<Script file="data\tbc\Warlock.lua"/>
 	<Script file="data\vanilla\Warrior.lua"/>
 	<Script file="data\tbc\Warrior.lua"/>
 </Ui>

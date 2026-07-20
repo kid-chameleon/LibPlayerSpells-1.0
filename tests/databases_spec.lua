@@ -7,7 +7,6 @@ local EXPANSIONS = { vanilla = 0, tbc = 1 }
 -- unported classes live at the data root and load on every flavor; they
 -- knowingly mix flavor ids and rely on the runtime soft-filtering
 local ROOT_SOURCES = {
-	'Warlock',
 }
 
 local FLAVORED_SOURCES = {
@@ -19,6 +18,7 @@ local FLAVORED_SOURCES = {
 	{ path = 'vanilla/Racials', category = 'RACIAL', interface = 11508 },
 	{ path = 'vanilla/Rogue', category = 'ROGUE', interface = 11508 },
 	{ path = 'vanilla/Shaman', category = 'SHAMAN', interface = 11508 },
+	{ path = 'vanilla/Warlock', category = 'WARLOCK', interface = 11508 },
 	{ path = 'vanilla/Warrior', category = 'WARRIOR', interface = 11508 },
 	{ path = 'tbc/Druid', category = 'DRUID', interface = 20506 },
 	{ path = 'tbc/Hunter', category = 'HUNTER', interface = 20506 },
@@ -28,6 +28,7 @@ local FLAVORED_SOURCES = {
 	{ path = 'tbc/Racials', category = 'RACIAL', interface = 20506 },
 	{ path = 'tbc/Rogue', category = 'ROGUE', interface = 20506 },
 	{ path = 'tbc/Shaman', category = 'SHAMAN', interface = 20506 },
+	{ path = 'tbc/Warlock', category = 'WARLOCK', interface = 20506 },
 	{ path = 'tbc/Warrior', category = 'WARRIOR', interface = 20506 },
 }
 
