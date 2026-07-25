@@ -26,7 +26,7 @@ lib:__RegisterSpells('RACIAL', 11508, 1, {
 		 20589, -- Escape Artist (Gnome)
 		DISPEL = {
 			PERSONAL = {
-				[ 20594] = 'DISEASE POISON', -- Stoneform (Dwarf) -- NOTE: bleeds currently not tracked
+				[ 20594] = 'AURA DISEASE POISON', -- Stoneform (Dwarf) -- NOTE: bleeds currently not tracked
 			},
 		},
 		AURA = {
@@ -37,7 +37,6 @@ lib:__RegisterSpells('RACIAL', 11508, 1, {
 				 20600, -- Perception (Human)
 				 20572, -- Blood Fury (Orc attack power)
 				 20580, -- Shadowmeld (Night elf)
-				 20594, -- Stoneform (Dwarf)
 			},
 			HARMFUL = {
 				CROWD_CTRL = {

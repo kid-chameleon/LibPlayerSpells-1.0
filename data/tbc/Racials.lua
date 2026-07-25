@@ -26,7 +26,7 @@ lib:__RegisterSpells('RACIAL', 20506, 1, {
 		 20589, -- Escape Artist (Gnome)
 		DISPEL = {
 			PERSONAL = {
-				[20594] = 'DISEASE POISON', -- Stoneform (Dwarf) -- NOTE: bleeds currently not tracked
+				[20594] = 'AURA DISEASE POISON', -- Stoneform (Dwarf) -- NOTE: bleeds currently not tracked
 			},
 		},
 		AURA = {
@@ -39,7 +39,6 @@ lib:__RegisterSpells('RACIAL', 20506, 1, {
 				 33697, -- Blood Fury (Orc shaman)
 				 33702, -- Blood Fury (Orc spell damage)
 				 20580, -- Shadowmeld (Night elf)
-				 20594, -- Stoneform (Dwarf)
 			},
 			HELPFUL = {
 				28880, -- Gift of the Naaru (Draenei)

@@ -130,7 +130,6 @@ lib:__RegisterSpells('HUNTER', 11508, 1, {
 			409583, -- Aspect of the Lion
 		},
 		PERSONAL = {
-			3045, -- Rapid Fire
 			6197, -- Eagle Eye
 			5118, -- Aspect of the Cheetah
 			13161, -- Aspect of the Beast
