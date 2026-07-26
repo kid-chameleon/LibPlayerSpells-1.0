@@ -80,6 +80,15 @@ lib:__RegisterSpells('HUNTER', 20506, 1, {
 				19574, -- Bestial Wrath
 			},
 		},
+		DISPEL = {
+			HARMFUL = {
+				MAGIC = {
+					14285, -- Begin Arcane Shot
+					14286,
+					27019, -- End Arcane Shot
+				},
+			},
+		},
 	},
 	AURA = {
 		HARMFUL = {
