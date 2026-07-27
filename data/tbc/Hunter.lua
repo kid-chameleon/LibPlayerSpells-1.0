@@ -85,6 +85,7 @@ lib:__RegisterSpells('HUNTER', 20506, 1, {
 				MAGIC = {
 					14285, -- Begin Arcane Shot
 					14286,
+					14287,
 					27019, -- End Arcane Shot
 				},
 			},
