@@ -92,6 +92,7 @@ lib:__RegisterSpells('SHAMAN', 20506, 1, {
 			25469,
 			25472, -- End Lightning Shield
 			16246, -- Clearcasting (Elemental Focus)
+			43339, -- Shamanistic Focus (Enhancement talent)
 			POWER_REGEN = {
 				24398, -- Begin Water Shield
 				33736, -- End Water Shield
@@ -110,13 +111,6 @@ lib:__RegisterSpells('SHAMAN', 20506, 1, {
 			[2870] = 'DISEASE', -- Cure Disease
 		},
 	},
-	-- REVIEW: left out for now: totem area buffs (Strength of Earth, Grace
-	-- of Air, Windfury, Flametongue, Wrath of Air, Mana Spring, Healing
-	-- Stream, resistance totems, Tranquil Air) and their drop spells, weapon
-	-- imbue procs (Frostbrand snare), Sentry Totem 6495, Reincarnation
-	-- 20608, talent procs without an action button (Focused Casting,
-	-- Ancestral Fortitude, Healing Way, Elemental Devastation, Flurry,
-	-- Unleashed Rage, Shamanistic Focus)
 }, {
 	-- map aura to provider(s)
 	[3600] = 2484, -- Earthbind <- Earthbind Totem
@@ -143,5 +137,27 @@ lib:__RegisterSpells('SHAMAN', 20506, 1, {
 		10605,
 		25439,
 		25442, -- End Chain Lightning
+	},
+	[43339] = { -- Shamanistic Focus
+		8042, -- Begin Earth Shock
+		8044,
+		8045,
+		8046,
+		10412,
+		10413,
+		10414,
+		25454, -- End Earth Shock
+		8050, -- Begin Flame Shock
+		8052,
+		8053,
+		10447,
+		10448,
+		29228,
+		25457, -- End Flame Shock
+		8056, -- Begin Frost Shock
+		8058,
+		10472,
+		10473,
+		25464, -- End Frost Shock
 	},
 }, {})
