@@ -18,7 +18,7 @@ You should have received a copy of the GNU General Public License
 along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 --]]
 
-local MAJOR, MINOR, lib = "LibPlayerSpells-1.0", 16
+local MAJOR, MINOR, lib = "LibPlayerSpells-1.0", 18
 if LibStub then
 	local oldMinor
 	lib, oldMinor = LibStub:NewLibrary(MAJOR, MINOR)
@@ -41,6 +41,7 @@ local floor = _G.floor
 local format = _G.format
 local GetSpellInfo = _G.C_Spell.GetSpellInfo
 local gsub = _G.string.gsub
+local select = _G.select
 local strsplit = _G.strsplit
 local strtrim = _G.strtrim
 local tinsert = _G.tinsert
@@ -56,8 +57,15 @@ local bnot = _G.bit.bnot
 local FLAVORS = { [0] = 'vanilla', [1] = 'tbc', [2] = 'wrath', [3] = 'cata' }
 lib.expansion = _G.LE_EXPANSION_LEVEL_CURRENT or 0
 lib.flavor = FLAVORS[lib.expansion] or 'vanilla'
-lib.isSoD = _G.C_Seasons and _G.C_Seasons.HasActiveSeason()
-	and _G.C_Seasons.GetActiveSeason() == _G.Enum.SeasonID.SeasonOfDiscovery or false
+-- The forever beta reports the vanilla expansion level but ships its own spell data.
+-- It currently has no project constant, only the 1.60.x interface version.
+-- TODO: update this if it gets an official constant.
+do
+	local tocVersion = _G.GetBuildInfo and select(4, _G.GetBuildInfo()) or 0
+	if tocVersion >= 16000 and tocVersion < 20000 then
+		lib.flavor = 'forever'
+	end
+end
 
 -- Basic constants use for the bitfields
 lib.constants = {

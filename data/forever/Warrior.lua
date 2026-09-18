@@ -20,8 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-if lib.flavor ~= 'vanilla' then return end
-lib:__RegisterSpells('WARRIOR', 11508, 1, {
+if lib.flavor ~= 'forever' then return end
+lib:__RegisterSpells('WARRIOR', 16001, 1, {
 	COOLDOWN = {
 		100, -- Begin Charge
 		6178,
@@ -57,12 +57,12 @@ lib:__RegisterSpells('WARRIOR', 11508, 1, {
 		},
 		AURA = {
 			HARMFUL = {
-				676, -- Disarm
-				12294, -- Begin Mortal Strike (Arms talent)
+				676, -- Disarm -- NOTE: the lib has no DISARM crowd control type
+				12294, -- Begin Mortal Strike (Arms talent, healing reduction)
 				21551,
 				21552,
 				21553, -- End Mortal Strike
-				-- attack speed slow only
+				-- attack speed slow only, so no SNARE
 				6343, -- Begin Thunder Clap
 				8198,
 				8204,
@@ -72,14 +72,13 @@ lib:__RegisterSpells('WARRIOR', 11508, 1, {
 				CROWD_CTRL = {
 					DISORIENT = {
 						5246, -- Intimidating Shout (cower on the target)
-						20511, -- Intimidating Shout (flee on others)
+						20511, -- Intimidating Shout (flee on nearby enemies)
 					},
 					STUN = {
 						7922, -- Charge Stun
 						20253, -- Begin Intercept Stun
 						20614,
 						20615, -- End Intercept Stun
-						12798, -- Revenge Stun (Improved Revenge)
 						12809, -- Concussion Blow (Protection talent)
 					},
 					TAUNT = {
@@ -150,10 +149,6 @@ lib:__RegisterSpells('WARRIOR', 11508, 1, {
 			},
 		},
 		PERSONAL = {
-			23885, -- Begin Bloodthirst (heal-on-hit buff)
-			23886,
-			23887,
-			23888, -- End Bloodthirst
 			29131, -- Bloodrage (rage over time)
 		},
 	},
@@ -167,19 +162,7 @@ lib:__RegisterSpells('WARRIOR', 11508, 1, {
 	[20253] = 20252, -- Begin Intercept Stun (from Intercept)
 	[20614] = 20616,
 	[20615] = 20617, -- End Intercept Stun
-	[12798] = { -- Revenge Stun (Improved Revenge)
-		6572, -- Begin Revenge
-		6574,
-		7379,
-		11600,
-		11601,
-		25288, -- End Revenge
-	},
 	[20511] = 5246, -- Intimidating Shout (flee) from the cast on the target
-	[23885] = 23881, -- Begin Bloodthirst
-	[23886] = 23892,
-	[23887] = 23893,
-	[23888] = 23894, -- End Bloodthirst
 	[29131] = 2687, -- Bloodrage (rage over time from the cast)
-	[12976] = 12975, -- Last Stand
+	[12976] = 12975, -- Last Stand (the health buff is its own spell)
 }, {})

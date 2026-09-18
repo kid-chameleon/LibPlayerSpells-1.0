@@ -20,8 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-if lib.flavor ~= 'vanilla' then return end
-lib:__RegisterSpells('PALADIN', 11508, 1, {
+if lib.flavor ~= 'forever' then return end
+lib:__RegisterSpells('PALADIN', 16001, 1, {
 	COOLDOWN = {
 		633, -- Begin Lay on Hands
 		2800,
@@ -34,6 +34,9 @@ lib:__RegisterSpells('PALADIN', 11508, 1, {
 		24239, -- End Hammer of Wrath
 		AURA = {
 			HARMFUL = {
+				1310910, -- Begin Light's Vigil (on an enemy)
+				1311594,
+				1311599, -- End Light's Vigil (on an enemy)
 				CROWD_CTRL = {
 					[20066] = 'INCAPACITATE', -- Repentance (talent)
 					DISORIENT = {
@@ -52,6 +55,9 @@ lib:__RegisterSpells('PALADIN', 11508, 1, {
 			},
 			HELPFUL = {
 				1044,        -- Blessing of Freedom
+				1310909, -- Begin Light's Vigil (on an ally)
+				1311593,
+				1311597, -- End Light's Vigil (on an ally)
 				[25771] = 'INVERT_AURA', -- Forbearance
 				SURVIVAL = {
 					1022,    -- Begin Blessing of Protection
@@ -60,7 +66,10 @@ lib:__RegisterSpells('PALADIN', 11508, 1, {
 				},
 			},
 			PERSONAL = {
+				1310897, -- Voice of Truth (talent)
+				1310994, -- Swift Judgement
 				SURVIVAL = {
+					1311015, -- Templar's Bulwark (talent, absorb shield)
 					498, -- Begin Divine Protection
 					5573, -- End Divine Protection
 					642, -- Begin Divine Shield
@@ -108,10 +117,6 @@ lib:__RegisterSpells('PALADIN', 11508, 1, {
 			19838,
 			25291, -- End Blessing of Might
 			1038, -- Blessing of Salvation
-			20911, -- Begin Blessing of Sanctuary
-			20912,
-			20913,
-			20914, -- End Blessing of Sanctuary
 			19742, -- Begin Blessing of Wisdom
 			19850,
 			19852,
@@ -124,7 +129,6 @@ lib:__RegisterSpells('PALADIN', 11508, 1, {
 			25782, -- Begin Greater Blessing of Might
 			25916, -- End Greater Blessing of Might
 			25895, -- Greater Blessing of Salvation
-			25899, -- Greater Blessing of Sanctuary
 			25894, -- Begin Greater Blessing of Wisdom
 			25918, -- End Greater Blessing of Wisdom
 			SURVIVAL = {
@@ -153,6 +157,13 @@ lib:__RegisterSpells('PALADIN', 11508, 1, {
 			10300,
 			10301, -- End Retribution Aura
 			25780, -- Righteous Fury
+			1311649, -- Begin Seal of Fury
+			1311656,
+			20163,
+			20419,
+			20421,
+			20422,
+			20423, -- End Seal of Fury
 			20375, -- Begin Seal of Command
 			20915,
 			20918,
@@ -216,4 +227,10 @@ lib:__RegisterSpells('PALADIN', 11508, 1, {
 	[20186] = 20166, -- Begin Judgement of Wisdom (from Seal of Wisdom)
 	[20354] = 20356,
 	[20355] = 20357, -- End Judgement of Wisdom
+	[1310909] = 1310911, -- Begin Light's Vigil on an ally (from the cast)
+	[1311593] = 1311590,
+	[1311597] = 1311595, -- End Light's Vigil on an ally
+	[1310910] = 1310911, -- Begin Light's Vigil on an enemy (from the cast)
+	[1311594] = 1311590,
+	[1311599] = 1311595, -- End Light's Vigil on an enemy
 }, {})

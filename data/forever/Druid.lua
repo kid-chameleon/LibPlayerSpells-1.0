@@ -20,8 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-if lib.flavor ~= 'vanilla' then return end
-lib:__RegisterSpells('DRUID', 11508, 1, {
+if lib.flavor ~= 'forever' then return end
+lib:__RegisterSpells('DRUID', 16001, 1, {
 	COOLDOWN = {
 		20484, -- Begin Rebirth
 		20739,
@@ -29,6 +29,11 @@ lib:__RegisterSpells('DRUID', 11508, 1, {
 		20747,
 		20748, -- End Rebirth
 		16979, -- Feral Charge (Bear)
+		1238122, -- Feral Charge
+		407995, -- Begin Mangle (bare cooldown, its debuff is not modeled)
+		1238069,
+		1238070,
+		1238073, -- End Mangle
 		AURA = {
 			HARMFUL = {
 				CROWD_CTRL = {
@@ -64,18 +69,14 @@ lib:__RegisterSpells('DRUID', 11508, 1, {
 				17116, -- End Nature's Swiftness
 				1850, -- Begin Dash
 				9821, -- End Dash
-				22842, -- Begin Frenzied Regeneration
-				22895,
-				22896, -- End Frenzied Regeneration
+				22842, -- Frenzied Regeneration
 				[5229] = 'POWER_REGEN', -- Enrage (Bear)
 				POWER_REGEN = {
-					[5217] = 'BURST', -- Begin Tiger's Fury
-					[6793] = 'BURST',
-					[9845] = 'BURST',
-					[9846] = 'BURST', -- End Tiger's Fury
+					[5217] = 'BURST', -- Tiger's Fury
 				},
 				SURVIVAL = {
 					22812, -- Barkskin
+					417141, -- Berserk
 				},
 			},
 		},
@@ -96,10 +97,6 @@ lib:__RegisterSpells('DRUID', 11508, 1, {
 			778,
 			9749,
 			9907, -- End Faerie Fire
-			16857, -- Begin Faerie Fire (Feral)
-			17390,
-			17391,
-			17392, -- End Faerie Fire (Feral)
 			8921, -- Begin Moonfire
 			8924,
 			8925,
@@ -134,6 +131,9 @@ lib:__RegisterSpells('DRUID', 11508, 1, {
 			2908, -- Begin Soothe Animal (reduces beast aggro range, not a dispel)
 			8955,
 			9901, -- End Soothe Animal
+			414644, -- Begin Lacerate
+			1235826,
+			1235827, -- End Lacerate
 			CROWD_CTRL = {
 				TAUNT = {
 					6795, -- Growl
@@ -197,9 +197,11 @@ lib:__RegisterSpells('DRUID', 11508, 1, {
 			8914,
 			9756,
 			9910, -- End Thorns
+			408120, -- Begin Wild Growth
+			1238214,
+			1238215, -- End Wild Growth
 		},
 		PERSONAL = {
-			16864, -- Omen of Clarity (Restoration talent)
 			5215, -- Begin Prowl
 			6783,
 			9913, -- End Prowl
@@ -213,7 +215,7 @@ lib:__RegisterSpells('DRUID', 11508, 1, {
 	[19972] = 16812,
 	[19971] = 16813,
 	[19970] = 17329, -- End Entangling Roots (from Nature's Grasp)
-	[19675] = 16979, -- Feral Charge Effect (from Feral Charge)
+	[19675] = { 16979, 1238122 }, -- Feral Charge Effect (from either Feral Charge)
 	[9007] = 9005, -- Begin Pounce Bleed (from Pounce)
 	[9824] = 9823,
 	[9826] = 9827, -- End Pounce Bleed

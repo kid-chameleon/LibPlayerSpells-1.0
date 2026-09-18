@@ -20,8 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-if lib.flavor ~= 'vanilla' then return end
-lib:__RegisterSpells('ROGUE', 11508, 1, {
+if lib.flavor ~= 'forever' then return end
+lib:__RegisterSpells('ROGUE', 16001, 1, {
 	COOLDOWN = {
 		1725, -- Distract
 		1966, -- Begin Feint
@@ -32,7 +32,7 @@ lib:__RegisterSpells('ROGUE', 11508, 1, {
 		[1766] = 'INTERRUPT', -- Kick
 		AURA = {
 			HARMFUL = {
-				14251, -- Riposte (disarm)
+				14251, -- Riposte (disarm) -- NOTE: the lib has no DISARM crowd control type
 				CROWD_CTRL = {
 					[2094] = 'DISORIENT', -- Blind
 					INCAPACITATE = {
@@ -80,9 +80,7 @@ lib:__RegisterSpells('ROGUE', 11508, 1, {
 			8650,
 			11197,
 			11198, -- End Expose Armor
-			16511, -- Begin Hemorrhage
-			17347,
-			17348, -- End Hemorrhage
+			16511, -- Hemorrhage
 			CROWD_CTRL = {
 				INCAPACITATE = {
 					6770, -- Begin Sap
@@ -103,6 +101,7 @@ lib:__RegisterSpells('ROGUE', 11508, 1, {
 			1787, -- End Stealth
 			5171, -- Begin Slice and Dice
 			6774, -- End Slice and Dice
+			1310703, -- Venom
 			14278, -- Ghostly Strike
 		},
 	},
