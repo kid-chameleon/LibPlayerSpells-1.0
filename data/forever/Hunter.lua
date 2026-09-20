@@ -20,24 +20,43 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-if lib.flavor ~= 'vanilla' then return end
-lib:__RegisterSpells('HUNTER', 11508, 1, {
+if lib.flavor ~= 'forever' then return end
+lib:__RegisterSpells('HUNTER', 16001, 1, {
 	COOLDOWN = {
 		AURA = {
 			HARMFUL = {
 				1543, -- Flare
-				24423, -- Begin Screech (pet)
+				1264758, -- Begin Dismember (pet, healing reduction)
+				1264927,
+				1264929,
+				1264930,
+				1264933, -- End Dismember (pet, healing reduction)
+				1265065, -- Begin Savage Rend (pet, bleed)
+				1265066,
+				1265067,
+				1265068,
+				1265069, -- End Savage Rend (pet, bleed)
+				1265054, -- Begin Mine! (pet, disarm)
+				1265055,
+				1265056,
+				1265057,
+				1265058, -- End Mine! (pet, disarm)
+				24423, -- Begin Demoralizing Screech (pet, attack power reduction)
 				24577,
 				24578,
-				24579, -- End Screech (pet)
-				24640, -- Begin Scorpid Poison (pet)
+				24579, -- End Demoralizing Screech (pet, attack power reduction)
+				24640, -- Begin Scorpid Poison (pet, stacking poison)
 				24583,
 				24586,
-				24587, -- End Scorpid Poison (pet)
-				24131, -- Begin Wyvern Sting (dot)
-				24134,
-				24135, -- End Wyvern Sting (dot)
+				24587, -- End Scorpid Poison (pet, stacking poison)
 				CROWD_CTRL = {
+					ROOT = {
+						1265843, -- Begin Web (pet)
+						1265878,
+						1265880,
+						1265881,
+						1265883, -- End Web (pet)
+					},
 					STUN = {
 						19410, -- Improved Concussive Shot
 						24394, -- Intimidation
@@ -52,13 +71,20 @@ lib:__RegisterSpells('HUNTER', 11508, 1, {
 						1513, -- Begin Scare Beast
 						14326,
 						14327, -- End Scare Beast
-						19386, -- Begin Wyvern Sting
-						24132,
-						24133, -- End Wyvern Sting
 					},
 				},
 				SNARE = {
 					13810, -- Frost Trap Aura
+					1264735, -- Begin Pinch (pet)
+					1264736,
+					1264739,
+					1264741,
+					1264742, -- End Pinch (pet)
+					1265038, -- Begin Tendon Rip (pet, also a bleed)
+					1265039,
+					1265040,
+					1265041,
+					1265042, -- End Tendon Rip (pet, also a bleed)
 				},
 			},
 			PERSONAL = {
@@ -92,6 +118,7 @@ lib:__RegisterSpells('HUNTER', 11508, 1, {
 				23147,
 				23148, -- End Dive (pet)
 				26064, -- Shell Shield (pet)
+				1310612, -- Trickster's Dance (pet)
 			},
 		},
 	},
@@ -99,10 +126,7 @@ lib:__RegisterSpells('HUNTER', 11508, 1, {
 		HARMFUL = {
 			1462, -- Beast Lore -- NOTE: HELPFUL on player controlled pets
 			1515, -- Tame Beast
-			3043, -- Begin Scorpid Sting
-			14275,
-			14276,
-			14277, -- End Scorpid Sting
+			3043, -- Scorpid Sting
 			1978, -- Begin Serpent Sting
 			13549,
 			13550,
@@ -126,10 +150,20 @@ lib:__RegisterSpells('HUNTER', 11508, 1, {
 			13812, -- Begin Explosive Trap Effect
 			14314,
 			14315, -- End Explosive Trap Effect
+			24118, -- Begin Lacerate (bleed)
+			24119,
+			24120,
+			1299332, -- End Lacerate (bleed)
+			1265899, -- Begin Dust Cloud (pet, stacking armor reduction)
+			1265901,
+			1265902,
+			1265903,
+			1265904, -- End Dust Cloud (pet, stacking armor reduction)
 			CROWD_CTRL = {
 				ROOT = {
-					19185, -- Entrapment
+					19185, -- Entrapment (Survival talent)
 					19306, -- Begin Counterattack
+					1242634,
 					20909,
 					20910, -- End Counterattack
 				},
@@ -155,7 +189,11 @@ lib:__RegisterSpells('HUNTER', 11508, 1, {
 		PERSONAL = {
 			6197, -- Eagle Eye
 			5118, -- Aspect of the Cheetah
-			13161, -- Aspect of the Beast
+			13161, -- Begin Aspect of the Beast
+			1299445,
+			1299446,
+			1299447, -- End Aspect of the Beast
+			1299448, -- Quick Strikes
 			13163, -- Aspect of the Monkey
 			13165, -- Begin Aspect of the Hawk
 			14318,
@@ -164,7 +202,9 @@ lib:__RegisterSpells('HUNTER', 11508, 1, {
 			14321,
 			14322,
 			25296, -- End Aspect of the Hawk
-			19506, -- Begin Trueshot Aura
+			1299346, -- Begin Trueshot Aura
+			1299348,
+			19506,
 			20905,
 			20906, -- End Trueshot Aura
 		},
@@ -178,9 +218,6 @@ lib:__RegisterSpells('HUNTER', 11508, 1, {
 		14316,
 		14317, -- End Explosive Trap
 	},
-	[24131] = 19386, -- Begin Wyvern Sting
-	[24134] = 24132,
-	[24135] = 24133, -- End Wyvern Sting
 	[3355] = 1499, -- Freezing Trap Effect
 	[14308] = 14310,
 	[14309] = 14311,

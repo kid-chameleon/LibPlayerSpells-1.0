@@ -20,8 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-if lib.flavor ~= 'vanilla' then return end
-lib:__RegisterSpells('PRIEST', 11508, 1, {
+if lib.flavor ~= 'forever' then return end
+lib:__RegisterSpells('PRIEST', 16001, 1, {
 	COOLDOWN = {
 		8092, -- Begin Mind Blast
 		8102,
@@ -32,7 +32,7 @@ lib:__RegisterSpells('PRIEST', 11508, 1, {
 		10945,
 		10946,
 		10947, -- End Mind Blast
-		13908, -- Begin Desperate Prayer (Human/Dwarf)
+		13908, -- Begin Desperate Prayer (Dwarf)
 		19236,
 		19238,
 		19240,
@@ -40,6 +40,11 @@ lib:__RegisterSpells('PRIEST', 11508, 1, {
 		19242,
 		19243, -- End Desperate Prayer
 		[15487] = 'INTERRUPT', -- Silence (Shadow talent)
+		401955, -- Shadow Word: Death
+		402174, -- Begin Penance
+		1240720,
+		1240721,
+		1316995, -- End Penance
 		AURA = {
 			HARMFUL = {
 				2944, -- Begin Devouring Plague (Undead)
@@ -48,19 +53,44 @@ lib:__RegisterSpells('PRIEST', 11508, 1, {
 				19278,
 				19279,
 				19280, -- End Devouring Plague
+				10797, -- Begin Starshards (Night Elf)
+				19296,
+				19299,
+				19302,
+				19303,
+				19304,
+				19305, -- End Starshards
 				CROWD_CTRL = {
 					DISORIENT = {
 						8122, -- Begin Psychic Scream
 						8124,
 						10888,
 						10890, -- End Psychic Scream
+						1277455, -- Confounding Flash (Gnome)
+					},
+					ROOT = {
+						1277331, -- Begin Chastise (Dwarf)
+						1277332,
+						1277333,
+						1277334,
+						1277335, -- End Chastise
 					},
 				},
 			},
 			HELPFUL = {
-				6346, -- Fear Ward (Dwarf)
+				6346, -- Fear Ward
+				401877, -- Begin Prayer of Mending
+				1240848,
+				1240849, -- End Prayer of Mending
 				BURST = {
 					10060, -- Power Infusion (Discipline talent)
+				},
+				SURVIVAL = {
+					1277462, -- Begin Contingency Plan (Gnome)
+					1277634,
+					1277638,
+					1277639,
+					1277640, -- End Contingency Plan
 				},
 			},
 			PERSONAL = {
@@ -76,12 +106,15 @@ lib:__RegisterSpells('PRIEST', 11508, 1, {
 				19273,
 				19274,
 				19275, -- End Feedback
+				POWER_REGEN = {
+					1277324, -- Begin Dark Sacrifice (Undead)
+					1277325,
+					1277326,
+					1277327,
+					1277328, -- End Dark Sacrifice
+				},
 				SURVIVAL = {
-					2651, -- Begin Elune's Grace (Night Elf)
-					19289,
-					19291,
-					19292,
-					19293, -- End Elune's Grace
+					2651, -- Elune's Grace (Night Elf)
 				},
 			},
 		},
@@ -116,13 +149,6 @@ lib:__RegisterSpells('PRIEST', 11508, 1, {
 			19252,
 			19253,
 			19254, -- End Touch of Weakness debuff
-			10797, -- Begin Starshards (Night Elf)
-			19296,
-			19299,
-			19302,
-			19303,
-			19304,
-			19305, -- End Starshards
 			15286, -- Vampiric Embrace (Shadow talent)
 			453, -- Begin Mind Soothe
 			8192,
@@ -210,7 +236,7 @@ lib:__RegisterSpells('PRIEST', 11508, 1, {
 			15473, -- Shadowform (Shadow talent)
 			2096, -- Begin Mind Vision
 			10909, -- End Mind Vision
-			1706, -- Levitate
+			1706, -- Levitate (self-only in vanilla)
 		},
 	},
 	DISPEL = {
@@ -241,4 +267,7 @@ lib:__RegisterSpells('PRIEST', 11508, 1, {
 		10900,
 		10901, -- End Power Word: Shield
 	},
+	[401877] = 401859, -- Begin Prayer of Mending aura
+	[1240848] = 1240826,
+	[1240849] = 1240827, -- End Prayer of Mending aura
 }, {})

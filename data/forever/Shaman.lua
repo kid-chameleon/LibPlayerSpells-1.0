@@ -20,8 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-if lib.flavor ~= 'vanilla' then return end
-lib:__RegisterSpells('SHAMAN', 11508, 1, {
+if lib.flavor ~= 'forever' then return end
+lib:__RegisterSpells('SHAMAN', 16001, 1, {
 	COOLDOWN = {
 		INTERRUPT = {
 			8042, -- Begin Earth Shock
@@ -51,10 +51,15 @@ lib:__RegisterSpells('SHAMAN', 11508, 1, {
 			},
 			HELPFUL = {
 				8178, -- Grounding Totem Effect
+				408521, -- Begin Riptide
+				1239242,
+				1239243, -- End Riptide
 			},
 			PERSONAL = {
-				16166, -- Elemental Mastery (Elemental talent)
 				16188, -- Nature's Swiftness (Restoration talent)
+				POWER_REGEN = {
+					425336, -- Shamanistic Rage
+				},
 			},
 		},
 	},
@@ -74,6 +79,9 @@ lib:__RegisterSpells('SHAMAN', 11508, 1, {
 			10431,
 			10432, -- End Lightning Shield
 			16246, -- Clearcasting (Elemental Focus)
+			POWER_REGEN = {
+				408510, -- Water Shield (talent)
+			},
 		},
 	},
 	DISPEL = {

@@ -20,8 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-if lib.flavor ~= 'vanilla' then return end
-lib:__RegisterSpells('MAGE', 11508, 1, {
+if lib.flavor ~= 'forever' then return end
+lib:__RegisterSpells('MAGE', 16001, 1, {
 	COOLDOWN = {
 		1953, -- Blink
 		[2139] = 'INTERRUPT', -- Counterspell
@@ -57,8 +57,7 @@ lib:__RegisterSpells('MAGE', 11508, 1, {
 				SURVIVAL = {
 					885, -- Begin Invisibility
 					11392,
-					23452,
-					886, -- End Invisibility
+					23452, -- End Invisibility
 					11958, -- Ice Block
 				},
 			},
@@ -148,6 +147,9 @@ lib:__RegisterSpells('MAGE', 11508, 1, {
 				10159,
 				10160,
 				10161, -- End Cone of Cold
+				401502, -- Begin Frostfire Bolt
+				1237312,
+				1237313, -- End Frostfire Bolt
 			},
 		},
 		HELPFUL = {
@@ -195,8 +197,16 @@ lib:__RegisterSpells('MAGE', 11508, 1, {
 			8462,
 			10177,
 			28609, -- End Frost Ward
+			400573, -- Arcane Blast
 		},
 	},
 }, {
 	-- map aura to provider(s)
+	[400573] = { -- Arcane Blast buff
+		400574, -- Begin Arcane Blast
+		1239696,
+		1239697,
+		1239699,
+		1239700, -- End Arcane Blast
+	},
 }, {})

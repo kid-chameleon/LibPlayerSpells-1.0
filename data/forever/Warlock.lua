@@ -20,8 +20,8 @@ along with LibPlayerSpells-1.0. If not, see <http://www.gnu.org/licenses/>.
 
 local lib = LibStub('LibPlayerSpells-1.0')
 if not lib then return end
-if lib.flavor ~= 'vanilla' then return end
-lib:__RegisterSpells('WARLOCK', 11508, 1, {
+if lib.flavor ~= 'forever' then return end
+lib:__RegisterSpells('WARLOCK', 16001, 1, {
 	COOLDOWN = {
 		AURA = {
 			PERSONAL = {
@@ -61,20 +61,27 @@ lib:__RegisterSpells('WARLOCK', 11508, 1, {
 			11667,
 			11668,
 			25309, -- End Immolate
-			980, -- Begin Curse of Agony
+			980, -- Begin Bane of Agony
 			1014,
 			6217,
 			11711,
 			11712,
-			11713, -- End Curse of Agony
-			603, -- Curse of Doom
+			11713, -- End Bane of Agony
+			603, -- Bane of Doom
+			1225228, -- Bane of Havoc (5 min curse, one target)
+			1316697, -- Wrack
+			403501, -- Begin Haunt
+			1293693,
+			1293694, -- End Haunt
+			440892, -- Begin Curse of the Elements
+			1311676,
+			1311677,
+			1311680, -- End Curse of the Elements
 			1010, -- Curse of Idiocy
 			704, -- Begin Curse of Recklessness
 			7658,
 			7659,
 			11717, -- End Curse of Recklessness
-			17862, -- Begin Curse of Shadow
-			17937, -- End Curse of Shadow
 			1714, -- Begin Curse of Tongues
 			11719, -- End Curse of Tongues
 			702, -- Begin Curse of Weakness
@@ -83,9 +90,6 @@ lib:__RegisterSpells('WARLOCK', 11508, 1, {
 			7646,
 			11707,
 			11708, -- End Curse of Weakness
-			1490, -- Begin Curse of the Elements
-			11721,
-			11722, -- End Curse of the Elements
 			689, -- Begin Drain Life
 			699,
 			709,
