@@ -57,14 +57,9 @@ local bnot = _G.bit.bnot
 local FLAVORS = { [0] = 'vanilla', [1] = 'tbc', [2] = 'wrath', [3] = 'cata' }
 lib.expansion = _G.LE_EXPANSION_LEVEL_CURRENT or 0
 lib.flavor = FLAVORS[lib.expansion] or 'vanilla'
--- The forever beta reports the vanilla expansion level but ships its own spell data.
--- It currently has no project constant, only the 1.60.x interface version.
--- TODO: update this if it gets an official constant.
-do
-	local tocVersion = _G.GetBuildInfo and select(4, _G.GetBuildInfo()) or 0
-	if tocVersion >= 16000 and tocVersion < 20000 then
-		lib.flavor = 'forever'
-	end
+-- Forever reports the vanilla expansion level but ships its own spell data.
+if _G.WOW_PROJECT_CAMELOT and _G.WOW_PROJECT_ID == _G.WOW_PROJECT_CAMELOT then
+	lib.flavor = 'forever'
 end
 
 -- Basic constants use for the bitfields

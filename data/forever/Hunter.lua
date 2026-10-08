@@ -49,6 +49,11 @@ lib:__RegisterSpells('HUNTER', 16001, 1, {
 				24583,
 				24586,
 				24587, -- End Scorpid Poison (pet, stacking poison)
+				1264478, -- Begin Sonic Blast (pet, cast slow)
+				1264479,
+				1264480,
+				1264481,
+				1264482, -- End Sonic Blast (pet, cast slow)
 				CROWD_CTRL = {
 					ROOT = {
 						1265843, -- Begin Web (pet)
