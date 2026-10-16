@@ -116,7 +116,6 @@ lib:__RegisterSpells('PALADIN', 16001, 1, {
 			19837,
 			19838,
 			25291, -- End Blessing of Might
-			1038, -- Blessing of Salvation
 			19742, -- Begin Blessing of Wisdom
 			19850,
 			19852,
@@ -128,9 +127,10 @@ lib:__RegisterSpells('PALADIN', 16001, 1, {
 			25890, -- Greater Blessing of Light
 			25782, -- Begin Greater Blessing of Might
 			25916, -- End Greater Blessing of Might
-			25895, -- Greater Blessing of Salvation
 			25894, -- Begin Greater Blessing of Wisdom
 			25918, -- End Greater Blessing of Wisdom
+			1038, -- Salvation
+			25895, -- Mass Salvation
 			SURVIVAL = {
 				6940, -- Begin Blessing of Sacrifice
 				20729, -- End Blessing of Sacrifice

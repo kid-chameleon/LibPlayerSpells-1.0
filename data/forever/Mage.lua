@@ -147,6 +147,9 @@ lib:__RegisterSpells('MAGE', 16001, 1, {
 				10159,
 				10160,
 				10161, -- End Cone of Cold
+				1326053, -- Begin Frost Blast
+				1326054,
+				1326055, -- End Frost Blast
 				401502, -- Begin Frostfire Bolt
 				1237312,
 				1237313, -- End Frostfire Bolt

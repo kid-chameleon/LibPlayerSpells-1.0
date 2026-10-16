@@ -57,6 +57,7 @@ lib:__RegisterSpells('SHAMAN', 16001, 1, {
 			},
 			PERSONAL = {
 				16188, -- Nature's Swiftness (Restoration talent)
+				16166, -- Elemental Mastery (Elemental talent)
 				POWER_REGEN = {
 					425336, -- Shamanistic Rage
 				},

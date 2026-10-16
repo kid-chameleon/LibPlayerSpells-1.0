@@ -82,6 +82,7 @@ lib:__RegisterSpells('PRIEST', 16001, 1, {
 				401877, -- Begin Prayer of Mending
 				1240848,
 				1240849, -- End Prayer of Mending
+				1326168, -- Dark Inspiration (Shadow talent)
 				BURST = {
 					10060, -- Power Infusion (Discipline talent)
 				},
