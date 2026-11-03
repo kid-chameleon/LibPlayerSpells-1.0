@@ -47,10 +47,10 @@ lib:__RegisterSpells('RACIAL', 16001, 1, {
 				 1259821,
 				 1259823, -- End Eureka! (Gnome)
 				 1259416, -- Walk on Air (Skyborne)
-				 1270842, -- Begin Energized (High Order Skyborne, from Read Ley Line)
-				 1259691, -- End Energized (the long one, near a ley line)
-				 1259688, -- Begin Elemental Blessing (Windshaper Skyborne, from Skysight)
-				 1270893, -- End Elemental Blessing (the long one, near a convergence)
+				 1270842, -- Energized (High Order Skyborne, from Read Ley Line)
+				 1259691, -- Attuned (High Order Skyborne, near a ley line, boosts Energized)
+				 1259688, -- Elemental Blessing (Windshaper Skyborne, from Skysight)
+				 1270893, -- Charged (Windshaper Skyborne, near a convergence, boosts Elemental Blessing)
 			},
 			HARMFUL = {
 				CROWD_CTRL = {
@@ -64,8 +64,8 @@ lib:__RegisterSpells('RACIAL', 16001, 1, {
 }, {
 	-- map aura to provider(s)
 	[20578] = 20577, -- Cannibalize (Undead)
-	[1270842] = 1259705, -- Begin Energized (from Read Ley Line)
-	[1259691] = 1259705, -- End Energized
-	[1259688] = 1259686, -- Begin Elemental Blessing (from Skysight)
-	[1270893] = 1259686, -- End Elemental Blessing
+	[1270842] = 1259705, -- Energized (from Read Ley Line)
+	[1259691] = 1259705, -- Attuned
+	[1259688] = 1259686, -- Elemental Blessing (from Skysight)
+	[1270893] = 1259686, -- Charged
 })

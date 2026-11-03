@@ -66,8 +66,6 @@ lib:__RegisterSpells('PALADIN', 16001, 1, {
 				},
 			},
 			PERSONAL = {
-				1310897, -- Voice of Truth (talent)
-				1310994, -- Swift Judgement
 				SURVIVAL = {
 					1311015, -- Templar's Bulwark (talent, absorb shield)
 					498, -- Begin Divine Protection
@@ -76,7 +74,8 @@ lib:__RegisterSpells('PALADIN', 16001, 1, {
 					1020, -- End Divine Shield
 					20925, -- Begin Holy Shield (talent)
 					20927,
-					20928, -- End Holy Shield
+					20928,
+					1239570, -- End Holy Shield
 				},
 			},
 		},
@@ -106,9 +105,7 @@ lib:__RegisterSpells('PALADIN', 16001, 1, {
 			20355, -- End Judgement of Wisdom
 		},
 		HELPFUL = {
-			19977, -- Begin Blessing of Light
-			19978,
-			19979, -- End Blessing of Light
+			1328548, -- Oath of Light (Holy talent)
 			19740, -- Begin Blessing of Might
 			19834,
 			19835,
@@ -124,13 +121,10 @@ lib:__RegisterSpells('PALADIN', 16001, 1, {
 			25290, -- End Blessing of Wisdom
 			20217, -- Blessing of Kings
 			25898, -- Greater Blessing of Kings
-			25890, -- Greater Blessing of Light
 			25782, -- Begin Greater Blessing of Might
 			25916, -- End Greater Blessing of Might
 			25894, -- Begin Greater Blessing of Wisdom
 			25918, -- End Greater Blessing of Wisdom
-			1038, -- Salvation
-			25895, -- Mass Salvation
 			SURVIVAL = {
 				6940, -- Begin Blessing of Sacrifice
 				20729, -- End Blessing of Sacrifice

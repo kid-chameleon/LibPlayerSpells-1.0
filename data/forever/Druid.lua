@@ -32,8 +32,7 @@ lib:__RegisterSpells('DRUID', 16001, 1, {
 		1238122, -- Feral Charge
 		407995, -- Begin Mangle (bare cooldown, its debuff is not modeled)
 		1238069,
-		1238070,
-		1238073, -- End Mangle
+		1238070, -- End Mangle
 		AURA = {
 			HARMFUL = {
 				CROWD_CTRL = {
@@ -131,7 +130,9 @@ lib:__RegisterSpells('DRUID', 16001, 1, {
 			2908, -- Begin Soothe Animal (reduces beast aggro range, not a dispel)
 			8955,
 			9901, -- End Soothe Animal
-			414644, -- Begin Lacerate
+			1328617, -- Begin Lacerate
+			1328616,
+			414644,
 			1235826,
 			1235827, -- End Lacerate
 			CROWD_CTRL = {
