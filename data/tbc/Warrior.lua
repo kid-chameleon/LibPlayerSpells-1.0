@@ -49,13 +49,19 @@ lib:__RegisterSpells('WARRIOR', 20506, 1, {
 		23894,
 		25251,
 		30335, -- End Bloodthirst
-		23922, -- Begin Shield Slam (Protection talent)
-		23923,
-		23924,
-		23925,
-		25258,
-		30356, -- End Shield Slam
 		1680, -- Whirlwind
+		DISPEL = {
+			HARMFUL = {
+				MAGIC = {
+					23922, -- Begin Shield Slam (Protection talent)
+					23923,
+					23924,
+					23925,
+					25258,
+					30356, -- End Shield Slam
+				},
+			},
+		},
 		INTERRUPT = {
 			6552, -- Begin Pummel
 			6554, -- End Pummel
@@ -73,14 +79,16 @@ lib:__RegisterSpells('WARRIOR', 20506, 1, {
 				21553,
 				25248,
 				30330, -- End Mortal Strike
-				-- attack speed slow only, so no SNARE
-				6343, -- Begin Thunder Clap
-				8198,
-				8204,
-				8205,
-				11580,
-				11581,
-				25264, -- End Thunder Clap
+				UNIQUE_AURA = {
+					-- attack speed slow only, so no SNARE
+					6343, -- Begin Thunder Clap
+					8198,
+					8204,
+					8205,
+					11580,
+					11581,
+					25264, -- End Thunder Clap
+				},
 				CROWD_CTRL = {
 					DISORIENT = {
 						5246, -- Intimidating Shout (cower on the target)
@@ -141,12 +149,21 @@ lib:__RegisterSpells('WARRIOR', 20506, 1, {
 			11573,
 			11574,
 			25208, -- End Rend
-			7386, -- Begin Sunder Armor
-			7405,
-			8380,
-			11596,
-			11597,
-			25225, -- End Sunder Armor
+			UNIQUE_AURA = {
+				7386, -- Begin Sunder Armor
+				7405,
+				8380,
+				11596,
+				11597,
+				25225, -- End Sunder Armor
+				1160, -- Begin Demoralizing Shout
+				6190,
+				11554,
+				11555,
+				11556,
+				25202,
+				25203, -- End Demoralizing Shout
+			},
 			SNARE = {
 				1715, -- Begin Hamstring
 				7372,
